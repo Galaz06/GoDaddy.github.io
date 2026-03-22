@@ -8,6 +8,7 @@ const btn_close = document.querySelector(".close-icon")
 btn_menu.addEventListener("click", (e) =>{
     blur_1.style.zIndex = "10"
     blur_1.style.opacity = "1"
+    blur_1.style.pointerEvents = "auto" 
     header_nav.style.left = "0"
     btn_close.style.display = "block"
 })
@@ -15,6 +16,7 @@ btn_menu.addEventListener("click", (e) =>{
 btn_close.addEventListener("click", (e)=> {
     blur_1.style.zIndex = "0"
     blur_1.style.opacity = "0"
+    blur_1.style.pointerEvents = "none"
     header_nav.style.left = "-38rem"
     btn_close.style.display = "none"
 })
