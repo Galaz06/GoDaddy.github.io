@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://img6.wsimg.com/ux-assets/favicon/apple-icon-60x60.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://img6.wsimg.com/ux-assets/favicon/favicon-16x16.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="estilos.css">
+    <title>GoDaddy</title>
+</head>
+<body>
+    <!-- <div class="blur"></div> -->
+    <header class="header">
+        <div class="header-left">
+            <div class="menu-icon">
+                <i class="bi bi-list"></i>
+            </div>
+            <div class="header-logo-movil">
+                <svg viewBox="0 0 27 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.29 1.096c-2.806-1.747-6.5-1.335-9.795.733-3.284-2.066-6.98-2.48-9.783-.733-4.433 2.766-4.972 9.89-1.203 15.91 2.779 4.44 7.124 7.04 10.992 6.993 3.868.047 8.214-2.553 10.992-6.993 3.765-6.02 3.231-13.145-1.202-15.91zM4.548 15.736a14.403 14.403 0 0 1-1.74-3.977 11.347 11.347 0 0 1-.377-3.748c.168-2.224 1.076-3.957 2.554-4.88 1.479-.924 3.433-.977 5.515-.154.316.127.626.27.928.429a16.975 16.975 0 0 0-2.99 3.586c-2.288 3.655-2.986 7.725-2.187 10.967a14.883 14.883 0 0 1-1.703-2.223zm19.648-3.977a14.438 14.438 0 0 1-1.74 3.977 14.891 14.891 0 0 1-1.702 2.228c.714-2.908.229-6.469-1.522-9.81a.44.44 0 0 0-.633-.172l-5.459 3.406a.446.446 0 0 0-.142.613l.801 1.279a.444.444 0 0 0 .615.141l3.538-2.206c.115.343.23.68.315 1.028a11.35 11.35 0 0 1 .378 3.749c-.169 2.225-1.076 3.958-2.555 4.881a4.998 4.998 0 0 1-2.53.731h-.114a4.993 4.993 0 0 1-2.53-.73c-1.48-.924-2.388-2.657-2.556-4.882a11.383 11.383 0 0 1 .378-3.749 14.835 14.835 0 0 1 4.557-7.279 11.42 11.42 0 0 1 3.204-1.982c2.076-.824 4.034-.77 5.514.153s2.386 2.656 2.554 4.88c.085 1.26-.04 2.525-.371 3.744z"></path></svg>
+            </div>
+            <div class="header-logo">
+                <svg viewBox="0 0 163 34" xmlns="http://www.w3.org/2000/svg"><path d="M32.937 1.554c-3.968-2.48-9.193-1.89-13.852 1.039C14.44-.335 9.213-.925 5.25 1.553c-6.27 3.919-7.032 14.01-1.701 22.54 3.93 6.289 10.074 9.974 15.544 9.906 5.47.068 11.615-3.617 15.545-9.906 5.324-8.53 4.568-18.621-1.701-22.54zM6.43 22.292a20.436 20.436 0 0 1-2.46-5.632 16.104 16.104 0 0 1-.534-5.31c.238-3.153 1.521-5.608 3.612-6.914s4.855-1.385 7.8-.217c.441.177.878.38 1.312.606a24.092 24.092 0 0 0-4.228 5.08C8.697 15.086 7.71 20.849 8.84 25.444a20.912 20.912 0 0 1-2.408-3.151H6.43zm27.786-5.634a20.484 20.484 0 0 1-2.46 5.632 21.103 21.103 0 0 1-2.408 3.158c1.01-4.12.324-9.165-2.153-13.897a.624.624 0 0 0-.895-.243l-7.72 4.823a.629.629 0 0 0-.2.87l1.133 1.81a.632.632 0 0 0 .869.2l5.004-3.125c.162.486.324.97.445 1.457.472 1.725.653 3.518.536 5.303-.238 3.15-1.521 5.606-3.612 6.914a7.061 7.061 0 0 1-3.579 1.036h-.16a7.051 7.051 0 0 1-3.578-1.036c-2.093-1.308-3.376-3.763-3.614-6.914a16.143 16.143 0 0 1 .534-5.31 21.015 21.015 0 0 1 6.444-10.314 16.136 16.136 0 0 1 4.532-2.806c2.936-1.168 5.705-1.09 7.797.217 2.093 1.308 3.375 3.76 3.613 6.914a16.145 16.145 0 0 1-.528 5.31zm39.848-3.766c-4.06 0-7.34 3.169-7.34 7.2 0 4.004 3.28 7.12 7.34 7.12 4.086 0 7.366-3.111 7.366-7.12 0-4.03-3.275-7.2-7.366-7.2zm0 10.557c-1.871 0-3.295-1.513-3.295-3.384s1.424-3.407 3.295-3.407c1.898 0 3.322 1.54 3.322 3.412 0 1.87-1.424 3.385-3.322 3.385v-.006zM90.583 7.362h-7.468a.6.6 0 0 0-.61.612v18.208a.607.607 0 0 0 .61.648h7.468c5.977 0 10.13-3.975 10.13-9.758 0-5.818-4.153-9.71-10.13-9.71zm.177 15.622h-4.087V11.198h4.087c3.308 0 5.588 2.474 5.588 5.866 0 3.336-2.28 5.92-5.588 5.92zm24.82-9.7h-2.809a.63.63 0 0 0-.582.612v.833c-.64-1.057-2.085-1.835-3.884-1.835-3.503 0-6.783 2.75-6.783 7.145 0 4.37 3.251 7.17 6.755 7.17 1.806 0 3.28-.776 3.92-1.833v.86a.585.585 0 0 0 .582.586h2.808a.575.575 0 0 0 .543-.36.564.564 0 0 0 .041-.225V13.896a.595.595 0 0 0-.591-.612zm-6.533 10.196c-1.86 0-3.256-1.43-3.256-3.412s1.397-3.41 3.256-3.41c1.86 0 3.257 1.426 3.257 3.408s-1.395 3.412-3.257 3.412v.002zm22.294-16.118h-2.808a.588.588 0 0 0-.561.355.598.598 0 0 0-.049.229v6.728c-.648-1.002-2.114-1.78-3.948-1.78-3.476 0-6.7 2.75-6.7 7.145 0 4.37 3.252 7.17 6.755 7.17 1.806 0 3.17-.776 3.92-1.833v.86c0 .323.261.584.583.586h2.808a.571.571 0 0 0 .584-.585V7.95a.569.569 0 0 0-.357-.547.573.573 0 0 0-.227-.041zm-6.532 16.152c-1.852 0-3.237-1.444-3.237-3.448s1.39-3.447 3.237-3.447c1.846 0 3.237 1.444 3.237 3.447s-1.384 3.448-3.237 3.448zm22.29-16.152h-2.803a.597.597 0 0 0-.562.355.581.581 0 0 0-.05.229v6.728c-.64-1.002-2.114-1.78-3.947-1.78-3.477 0-6.7 2.75-6.7 7.145 0 4.37 3.253 7.17 6.755 7.17 1.807 0 3.168-.776 3.92-1.833v.86a.586.586 0 0 0 .584.586h2.803a.571.571 0 0 0 .542-.36.564.564 0 0 0 .04-.225V7.95a.567.567 0 0 0-.582-.588zm-6.532 16.152c-1.853 0-3.237-1.444-3.237-3.448s1.39-3.447 3.237-3.447c1.846 0 3.237 1.444 3.237 3.447s-1.38 3.448-3.232 3.448h-.005zm21.906-9.283-4.19 14.37c-.809 2.556-2.613 4.086-5.421 4.086-1.277 0-2.44-.261-3.35-.782-.531-.303-.971-.58-.971-1.023 0-.275.089-.417.25-.675l.832-1.246c.235-.348.408-.461.66-.461a.96.96 0 0 1 .554.192c.523.339 1.008.63 1.748.63.864 0 1.524-.277 1.88-1.306l.36-1.193h-1.696c-.418 0-.648-.25-.751-.584l-3.75-12.008c-.14-.473-.011-.946.683-.946h2.954c.36 0 .613.123.771.64l2.77 9.67 2.589-9.67c.082-.334.306-.64.75-.64h2.802c.552-.001.719.387.526.946zm-96.806 4.274v7.676a.625.625 0 0 1-.635.634h-2.317a.622.622 0 0 1-.634-.634v-2.015c-1.472 1.858-4.03 3.028-6.924 3.028-5.434 0-9.681-4.088-9.681-9.908 0-6.048 4.585-10.217 10.377-10.217 4.276 0 7.694 1.839 9.212 5.537a.842.842 0 0 1 .07.309c0 .175-.116.307-.486.435l-2.706 1.042a.694.694 0 0 1-.511.009.783.783 0 0 1-.324-.371c-.971-1.847-2.7-3.1-5.36-3.1-3.45 0-5.922 2.694-5.922 6.188 0 3.387 2.104 6.172 6.02 6.172 2.06 0 3.703-.97 4.469-2.037H57.87a.625.625 0 0 1-.634-.635v-2.086a.626.626 0 0 1 .634-.634h7.161a.602.602 0 0 1 .587.367.6.6 0 0 1 .049.24z"></path></svg>
+            </div>
+            <nav class="header-nav">
+                <div class="nav-logo">
+                    <svg viewBox="0 0 27 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.29 1.096c-2.806-1.747-6.5-1.335-9.795.733-3.284-2.066-6.98-2.48-9.783-.733-4.433 2.766-4.972 9.89-1.203 15.91 2.779 4.44 7.124 7.04 10.992 6.993 3.868.047 8.214-2.553 10.992-6.993 3.765-6.02 3.231-13.145-1.202-15.91zM4.548 15.736a14.403 14.403 0 0 1-1.74-3.977 11.347 11.347 0 0 1-.377-3.748c.168-2.224 1.076-3.957 2.554-4.88 1.479-.924 3.433-.977 5.515-.154.316.127.626.27.928.429a16.975 16.975 0 0 0-2.99 3.586c-2.288 3.655-2.986 7.725-2.187 10.967a14.883 14.883 0 0 1-1.703-2.223zm19.648-3.977a14.438 14.438 0 0 1-1.74 3.977 14.891 14.891 0 0 1-1.702 2.228c.714-2.908.229-6.469-1.522-9.81a.44.44 0 0 0-.633-.172l-5.459 3.406a.446.446 0 0 0-.142.613l.801 1.279a.444.444 0 0 0 .615.141l3.538-2.206c.115.343.23.68.315 1.028a11.35 11.35 0 0 1 .378 3.749c-.169 2.225-1.076 3.958-2.555 4.881a4.998 4.998 0 0 1-2.53.731h-.114a4.993 4.993 0 0 1-2.53-.73c-1.48-.924-2.388-2.657-2.556-4.882a11.383 11.383 0 0 1 .378-3.749 14.835 14.835 0 0 1 4.557-7.279 11.42 11.42 0 0 1 3.204-1.982c2.076-.824 4.034-.77 5.514.153s2.386 2.656 2.554 4.88c.085 1.26-.04 2.525-.371 3.744z"></path></svg>
+                </div>
+                <div class="close-icon">
+                    <i class="bi bi-x-lg"></i>
+                </div>
+                <ul class="nav-ul">
+                    <li class="nav-item">
+                        <a href="" class="nav-link"><strong>Dominios</strong></a>
+                        <i class="bi bi-chevron-down"></i>
+                        <i class="bi bi-arrow-right arrow-1"></i>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link"><strong>Sitios web</strong></a>
+                        <i class="bi bi-chevron-down"></i>
+                        <i class="bi bi-arrow-right arrow-1"></i>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link"><strong>Correo electrónico</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link"><strong>Hosting</strong></a>
+                        <i class="bi bi-chevron-down"></i>
+                        <i class="bi bi-arrow-right arrow-1"></i>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link"><strong>Marketing</strong></a>
+                        <i class="bi bi-chevron-down"></i>
+                        <i class="bi bi-arrow-right arrow-1"></i>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link"><strong>Seguridad</strong></a>
+                        <i class="bi bi-chevron-down"></i>
+                        <i class="bi bi-arrow-right arrow-1"></i>
+                    </li>
+                    <li class="nav-item extra" >
+                        <a href="" class="nav-link"><strong>GoDaddy Airo®</strong></a>
+                    </li>
+                    <li class="nav-item extra" >
+                        <a href="" class="nav-link"><strong>Precios</strong></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="header-right">
+            <div class="header-ul-container">
+                <ul class="header-ul">
+                    <li class="header-item"><a href="" class="header-link">Comunícate con nosotros</a></li>
+                    <li class="header-item"><a href="" class="header-link">Ayuda</a></li>
+                    <li class="header-item">
+                        <a href="" class="header-link">Inicio de sesión</a>
+                        <i class="bi bi-chevron-down"></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="phone-icon">
+                <i class="bi bi-telephone"></i>
+            </div>
+            <div class="help-icon">
+                <i class="bi bi-question-circle"></i>
+            </div>
+            <div class="user-icon">
+                <i class="bi bi-person"></i>
+            </div>
+            <div class="cart-icon">
+                <span>0</span>
+                <i class="bi bi-cart2"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="search-container">
+            <div class="search-bar">
+                <i class="bi bi-search"></i>
+                <input type="text" name="" id="input-search" placeholder="Escribe el dominio que deseas">
+                <button id="search-bar-button"> <i class="bi bi-search"></i> <strong>Buscar dominios</strong></button>
+            </div>
+            <div class="domain-shop">
+                <img data-cy="image" alt="img icon bug tld shop" height="20" width="34" src="https://img1.wsimg.com/cdnassets/m/3f21fb8f9628e003/original/img_icon_bug_tld-shop.svg">
+                <div class="domain-price">
+                    <p id="p-1"><strong>$910*/primer año</strong></p>
+                    <p id="p-2">complace al mundo con .shop</p>
+                </div>
+            </div>
+        </section>
+        <section class="poster">
+            <div class="poster-container">
+                <img src="https://img1.wsimg.com/cdnassets/transform/b977a66a-91c8-404d-b734-bde529b458cc/Marquee-WSB-Desktop" alt="Marquee WSB Desktop" role="presentation" class="core-icc1n5l" style="--icc1n5l-0: 2.1333333333333333;">
+                <div class="poster-content">
+                    <div class="poster-content-2">
+                        <span><strong>Creador de sitios web</strong></span>
+                        <h1>Tu sitio web gratuito es solo el comienzo</h1>
+                        <div class="buttons-contaier">
+                            <button id="button-poster">
+                                <strong>Comienza gratis</strong>
+                                <i class="bi bi-arrow-right"></i>
+                            </button>
+                            <div class="button-conatiner-2">
+                                <a href=""><strong>Más información</strong></a>
+                                <i class="bi bi-arrow-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+    </main>
+
+    <div class="opinions">
+        <div class="opinios-customers">
+            <p>Nuestros clientes dicen</p>
+            <h3>Exelente</h3>
+        </div>
+
+        <div class="opinions-line"></div>
+
+        <div class="stars">
+            <div class="stars-container">
+                <div class="star-container-square">
+                    <i class="bi bi-star-fill"></i>
+                </div>
+
+                <div class="star-container-square">
+                    <i class="bi bi-star-fill"></i>
+                </div>
+
+                <div class="star-container-square">
+                    <i class="bi bi-star-fill"></i>
+                </div>
+
+                <div class="star-container-square">
+                    <i class="bi bi-star-fill"></i>
+                </div>
+
+                <div class="star-container-square half">
+                    <i class="bi bi-star-fill"></i>
+                    <div class="grey-half"></div>
+                </div>
+            </div>
+
+            <div class="star-statistics">
+                <p>4,5 de 5 estrellas según <span><strong>132.682</strong> reseñas</span></p>
+            </div>
+        </div>
+
+        <div class="opinions-line"></div>
+
+        <img data-cy="image" alt="logotipo de Trustpilot" height="32" width="131" src="https://img1.wsimg.com/cdnassets/m/4d5a7b6ad639bd03/original/trustpilot-logo.svg">
+    </div>
+
+    <div class="buttons-services-container">
+        <button class="buttons-service button-push" ><strong>Dominios</strong></button>
+        <button class="buttons-service hi" ><strong>Recomendado</strong></button>
+        <button class="buttons-service hi" ><strong>WroldPress y seguridad</strong></button>
+    </div>
+
+    <section class="grid-services">
+       <div class="item-services domain">
+            <img class="img-services" src="https://img1.wsimg.com/cdnassets/transform/d009a724-178c-43f1-b028-294f2c99897e/intl-bl-ptc-domains-large-landscape" alt="">
+            <div class="service-content">
+                <h3>Dominios</h3>
+                <p>Empieza a disfrutar del dominio perfecto, que incluye protección de privacidad gratuita para siempre</p>
+                <button class="service-button"><strong>Buscar dominios</strong></button>
+            </div>
+       </div>
+       <div class="item-services domain">
+            <img class="img-services" src="https://img1.wsimg.com/cdnassets/transform/9ca96031-2755-4267-aeff-26be8c69bf86/DotCo-Large" alt="">
+            <div class="service-content">
+                <h3>.co por $13.439/primer año</h3>
+                <p>Asegúrese de que su empresa y sitio web destaquen con un dominio .co. Se requiere una compra de 2 años. Año adicional: $55.999</p>
+                <button class="service-button"><strong>Encuentrar dominio</strong></button>
+            </div>
+       </div>
+    </section>
+    
+    <section class="fuctions">
+        <div class="functions-title">
+            <h1>Haz crecer tu marca con sitios web y marketing</h1>
+        </div>
+
+        <div class="fuctions-container">
+            <div class="fuctions-image">
+                <img id="image-fuctions-1"  src="https://img1.wsimg.com/cdnassets/transform/b977a66a-91c8-404d-b734-bde529b458cc/Marquee-WSB-Desktop" alt="">
+                <img id="image-fuctions-2" src="https://img1.wsimg.com/cdnassets/transform/589acd99-ccfd-439a-88cb-1b5d7ee5f99f/intl-img-bl-prod-feature-build-trust-desktop" alt="" srcset="">
+                <img id="image-fuctions-3" src="https://img1.wsimg.com/cdnassets/transform/305e0fdd-0043-42cd-851e-5a6a00df7576/intl-img-bl-prod-feature-engage-with-marketing-desktop" alt="">
+            </div>
+            <div class="fuctions-content">
+                <div class="content-1 qwerty">
+                    <h3>Conéctate. No necesitas conocimientos de diseño</h3>
+                    <p>Elige entre cientos de plantillas atractivas y adaptables a dispositivos móviles con nuestro creador de sitios web</p>
+                </div>
+                <div class="content-2 qwerty">
+                    <h3>Genera confianza con un tu dominio y email</h3>
+                    <p>Mejora tu credibilidad ante tus clientes con un correo electrónico profesional idéntico a tu nombre de dominio</p>
+                </div>
+                <div class="content-3 qwerty">
+                    <h3>Utiliza herramientas de marketing</h3>
+                    <p>Ayuda a tu público a encontrarte con el SEO integrado y promociona tu negocio con las herramientas de redes sociales y marketing por correo electrónico</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="fuctions-container-mobile">
+            <div class="fuctions-subcontainer">
+                <div class="item item1">
+                    <div class="img-container">
+                        <img src="https://img1.wsimg.com/cdnassets/transform/85d22086-f0ee-4753-aea6-feb745045e99/Marquee-WSB-Tablet" alt="">
+                    </div>
+                    <div class="item-content">
+                        <h3>Conéctate. No necesitas conocimientos de diseño</h3>
+                        <p>Elige entre cientos de plantillas atractivas y adaptables a dispositivos móviles con nuestro creador de sitios web</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="img-container">
+                        <img src="https://img1.wsimg.com/cdnassets/transform/2ba9e3e7-09ca-4328-a731-a71aee2de27c/intl-img-bl-prod-feature-build-trust-portrait" alt="">
+                    </div>
+                    <div class="item-content">
+                        <h3>Genera confianza con un tu dominio y email</h3>
+                        <p>Mejora tu credibilidad ante tus clientes con un correo electrónico profesional idéntico a tu nombre de dominio</p>
+                    </div>
+                </div>
+
+                <div class="item item3">
+                    <div class="img-container">
+                        <img src="https://img1.wsimg.com/cdnassets/transform/49b4d83b-f74f-4850-898a-d3f981262e24/intl-img-bl-prod-feature-engage-with-marketing-portrait" alt="">
+                    </div>
+                    <div class="item-content">
+                        <h3>Utiliza herramientas de marketing</h3>
+                        <p>Ayuda a tu público a encontrarte con el SEO integrado y promociona tu negocio con las herramientas de redes sociales y marketing por email</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="fuctions-button">
+            <button id="fuctions-button">
+                <strong>Comienza gratis</strong>
+                <i class="bi bi-arrow-right"></i>
+            </button>
+        </div>
+    </section>
+
+    <section class="arguments_container">
+        <div class="arguments-tittle">
+            <h1>¿Por qué trabajar con GoDaddy?</h1>
+        </div>
+
+        <div class="grid-arguments">
+            <div class="argument" style="grid-area: box1;">
+                <img src="https://img1.wsimg.com/cdnassets/transform/42acc8f6-4e41-486e-9e48-802d3e56a866/HP-rtb-largest-registrar" alt="">
+                <div class="argument-content argument-1">
+                    <h3>Ofrecemos una enorme selección de dominios, desde .com hasta .xyz</h3>
+                </div>
+            </div>
+            <div class="argument" style="grid-area: box2;">
+                <img src="https://img1.wsimg.com/cdnassets/transform/963a18f9-4bf6-4ce3-8a9d-d47cf38d2fc3/HP-rtb-security" alt="">
+                <div class="argument-content argument-2">
+                    <h3>Zzzz... seguridad para ayudarte a dormir tranquilo todas las noches</h3>
+                </div>
+            </div>
+            <div class="argument sin-img" style="grid-area: box3;">
+                <div class="argument-content argument-3">
+                    <img data-cy="image" alt="globo verde 1" height="20" width="20" src="https://img1.wsimg.com/cdnassets/m/79d5ba397ecc48ba/original/globe-green-1.svg">
+                    <h3>Más que URLs. Más de 20 millones confían en nosotros para sus dominios y mucho más</h3>
+                </div>
+            </div>
+            <div class="argument sin-img" style="grid-area: box4;">
+                <div class="argument-content argument-4">
+                    <img data-cy="image" alt="Servidor de tarjeta HP RTB (imagen)" height="41" width="40" src="https://img1.wsimg.com/cdnassets/m/25195bc04d856587/original/img-hp-rtb-card-server.svg">
+                    <h3>Tecnología inteligente que se expande desde los mercados locales a los globales</h3>
+                </div>
+            </div>
+            <div class="argument" style="grid-area: box5;">
+                <img class="img-normal" src="https://img1.wsimg.com/cdnassets/transform/84aac8a6-753c-473c-a42f-c1fe79c5c772/HP-rtb-tools-for-every-first-landscape" alt="">
+                <img class="img-mobile" src="https://img1.wsimg.com/cdnassets/transform/a94f4770-ac4b-4ff6-862d-d8310155ba7b/HP-tools-for-every-first-portrait" alt="">
+                <div class="argument-content argument-5">
+                    <h3>Elementos esenciales para cualquier pequeña empresa: sitios web, correo electrónico, marketing y más</h3>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <div class="slider-container">
+        <div class="slider-infinite">
+            <ul class="ul-slider">
+                <li class="li-slider"><h2>¿Por qué elegir GoDaddy?</h2></li>
+                <li class="li-slider">CONFIANZA MUNDIAL</li>
+                <li class="li-slider">HAZ CRECER TU PROPIO NEGOCIO</li>
+                <li class="li-slider"><h2>¿Por qué elegir GoDaddy?</h2></li>
+                <li class="li-slider">SITIOS WEB SIMPLIFICADOS</li>
+                <li class="li-slider">REDES SOCIALES SIMPLIFICADAS</li>
+                <li class="li-slider"><h2>¿Por qué elegir GoDaddy?</h2></li>
+                <li class="li-slider">CONFIANZA MUNDIAL</li>
+                <li class="li-slider">HAZ CRECER TU PROPIO NEGOCIO</li>
+                <li class="li-slider"><h2>¿Por qué elegir GoDaddy?</h2></li>
+                <li class="li-slider">SITIOS WEB SIMPLIFICADOS</li>
+                <li class="li-slider">REDES SOCIALES SIMPLIFICADAS</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-offer">
+            <div class="offer-logo">
+                <svg viewBox="0 0 27 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.29 1.096c-2.806-1.747-6.5-1.335-9.795.733-3.284-2.066-6.98-2.48-9.783-.733-4.433 2.766-4.972 9.89-1.203 15.91 2.779 4.44 7.124 7.04 10.992 6.993 3.868.047 8.214-2.553 10.992-6.993 3.765-6.02 3.231-13.145-1.202-15.91zM4.548 15.736a14.403 14.403 0 0 1-1.74-3.977 11.347 11.347 0 0 1-.377-3.748c.168-2.224 1.076-3.957 2.554-4.88 1.479-.924 3.433-.977 5.515-.154.316.127.626.27.928.429a16.975 16.975 0 0 0-2.99 3.586c-2.288 3.655-2.986 7.725-2.187 10.967a14.883 14.883 0 0 1-1.703-2.223zm19.648-3.977a14.438 14.438 0 0 1-1.74 3.977 14.891 14.891 0 0 1-1.702 2.228c.714-2.908.229-6.469-1.522-9.81a.44.44 0 0 0-.633-.172l-5.459 3.406a.446.446 0 0 0-.142.613l.801 1.279a.444.444 0 0 0 .615.141l3.538-2.206c.115.343.23.68.315 1.028a11.35 11.35 0 0 1 .378 3.749c-.169 2.225-1.076 3.958-2.555 4.881a4.998 4.998 0 0 1-2.53.731h-.114a4.993 4.993 0 0 1-2.53-.73c-1.48-.924-2.388-2.657-2.556-4.882a11.383 11.383 0 0 1 .378-3.749 14.835 14.835 0 0 1 4.557-7.279 11.42 11.42 0 0 1 3.204-1.982c2.076-.824 4.034-.77 5.514.153s2.386 2.656 2.554 4.88c.085 1.26-.04 2.525-.371 3.744z"></path></svg>
+            </div>
+            <div class="offer-arrow">
+                <i class="bi bi-chevron-right"></i>
+            </div>
+            <p>Ofertas</p>
+        </div>
+
+        <div class="footer-links">
+            <div class="ul-links">
+                <li class="li-links">
+                    <div class="tittle-link">
+                        <h4>About GoDaddy</h4>
+                        <div class="footer-icon">
+                            <i class="bi bi-plus-lg"></i>
+                        </div>
+                    </div>
+                    <div class="links-container">
+                        <a href="#" class="footer-link">Sobre nosotros</a>
+                        <a href="#" class="footer-link">Carreras profesionales</a>
+                        <a href="#" class="footer-link">Contáctanos</a>
+                        <a href="#" class="footer-link">Blog de GoDaddy</a>
+                        <a href="#" class="footer-link">Relaciones con los inversores</a>
+                        <a href="#" class="footer-link">Legal</a>
+                        <a href="#" class="footer-link">Centro de confianza</a>
+                    </div>
+                </li>
+                <li class="li-links">
+                    <div class="tittle-link">
+                        <h4>Apoyo</h4>
+                        <div class="footer-icon">
+                            <i class="bi bi-plus-lg"></i>
+                        </div>
+                    </div>
+                    <div class="links-container">
+                        <a href="#" class="footer-link">Soporte de producto</a>
+                        <a href="#" class="footer-link">Denunciar abuso</a>
+                        <a href="#" class="footer-link">Recursos</a>
+                        <a href="#" class="footer-link">Política de divulgación de datos de registro de dominio</a>
+                    </div>
+                </li>
+                <li class="li-links">
+                    <div class="tittle-link">
+                        <h4>Recursos</h4>
+                        <div class="footer-icon">
+                            <i class="bi bi-plus-lg"></i>
+                        </div>
+                    </div>
+                    <div class="links-container">
+                        <a href="#" class="footer-link">Correo web</a>
+                        <a href="#" class="footer-link">Quién es</a>
+                        <a href="#" class="footer-link">Confirmación de ICANN</a>
+                        <a href="#" class="footer-link">Diseñadores y desarrolladores</a>
+                        <a href="#" class="footer-link">Dominios corporativos</a>
+                        <a href="#" class="footer-link">Código de canje</a>
+                        <a href="#" class="footer-link">Catálogo de productos</a>
+                        <a href="#" class="footer-link">Generador de nombres comerciales</a>
+                    </div>
+                </li>
+                <li class="li-links">
+                    <div class="tittle-link">
+                        <h4>Programas de socios</h4>
+                        <div class="footer-icon">
+                            <i class="bi bi-plus-lg"></i>
+                        </div>
+                    </div>
+                    <div class="links-container">
+                        <a href="#" class="footer-link">Afiliados</a>
+                        <a href="#" class="footer-link">Programas de revendedores</a>
+                        <a href="#" class="footer-link">GoDaddy Pro</a>
+                    </div>
+                </li>
+                <li class="li-links">
+                    <div class="tittle-link">
+                        <h4>Cuenta</h4>
+                        <div class="footer-icon">
+                            <i class="bi bi-plus-lg"></i>
+                        </div>
+                    </div>
+                    <div class="links-container">
+                        <a href="#" class="footer-link">Inicia sesión en GoDaddy</a>
+                        <a href="#" class="footer-link">Renovaciones y facturación</a>
+                        <a href="#" class="footer-link">Crear una cuenta</a>
+                    </div>
+                </li>
+                <li class="li-links">
+                    <div class="tittle-link">
+                        <h4>Compras</h4>
+                        <div class="footer-icon">
+                            <i class="bi bi-plus-lg"></i>
+                        </div>
+                    </div>
+                    <div class="links-container">
+                        <a href="#" class="footer-link">Compra un dominio</a>
+                        <a href="#" class="footer-link">sitios web</a>
+                        <a href="#" class="footer-link">Correo electrónico empresarial</a>
+                        <a href="#" class="footer-link">WordPress</a>
+                        <a href="#" class="footer-link">Alojamiento</a>
+                        <a href="#" class="footer-link">Seguridad web</a>
+                        <a href="#" class="footer-link">Generador de logotipos</a>
+                        <a href="#" class="footer-link">Números de teléfono</a>
+                    </div>
+                </li>
+            </div>
+        </div>
+        <div class="footer-meta">
+            <div class="footer-meta-container">
+                <div class="footer-logo-networks">
+                    <svg viewBox="0 0 163 34" xmlns="http://www.w3.org/2000/svg"><path d="M32.937 1.554c-3.968-2.48-9.193-1.89-13.852 1.039C14.44-.335 9.213-.925 5.25 1.553c-6.27 3.919-7.032 14.01-1.701 22.54 3.93 6.289 10.074 9.974 15.544 9.906 5.47.068 11.615-3.617 15.545-9.906 5.324-8.53 4.568-18.621-1.701-22.54zM6.43 22.292a20.436 20.436 0 0 1-2.46-5.632 16.104 16.104 0 0 1-.534-5.31c.238-3.153 1.521-5.608 3.612-6.914s4.855-1.385 7.8-.217c.441.177.878.38 1.312.606a24.092 24.092 0 0 0-4.228 5.08C8.697 15.086 7.71 20.849 8.84 25.444a20.912 20.912 0 0 1-2.408-3.151H6.43zm27.786-5.634a20.484 20.484 0 0 1-2.46 5.632 21.103 21.103 0 0 1-2.408 3.158c1.01-4.12.324-9.165-2.153-13.897a.624.624 0 0 0-.895-.243l-7.72 4.823a.629.629 0 0 0-.2.87l1.133 1.81a.632.632 0 0 0 .869.2l5.004-3.125c.162.486.324.97.445 1.457.472 1.725.653 3.518.536 5.303-.238 3.15-1.521 5.606-3.612 6.914a7.061 7.061 0 0 1-3.579 1.036h-.16a7.051 7.051 0 0 1-3.578-1.036c-2.093-1.308-3.376-3.763-3.614-6.914a16.143 16.143 0 0 1 .534-5.31 21.015 21.015 0 0 1 6.444-10.314 16.136 16.136 0 0 1 4.532-2.806c2.936-1.168 5.705-1.09 7.797.217 2.093 1.308 3.375 3.76 3.613 6.914a16.145 16.145 0 0 1-.528 5.31zm39.848-3.766c-4.06 0-7.34 3.169-7.34 7.2 0 4.004 3.28 7.12 7.34 7.12 4.086 0 7.366-3.111 7.366-7.12 0-4.03-3.275-7.2-7.366-7.2zm0 10.557c-1.871 0-3.295-1.513-3.295-3.384s1.424-3.407 3.295-3.407c1.898 0 3.322 1.54 3.322 3.412 0 1.87-1.424 3.385-3.322 3.385v-.006zM90.583 7.362h-7.468a.6.6 0 0 0-.61.612v18.208a.607.607 0 0 0 .61.648h7.468c5.977 0 10.13-3.975 10.13-9.758 0-5.818-4.153-9.71-10.13-9.71zm.177 15.622h-4.087V11.198h4.087c3.308 0 5.588 2.474 5.588 5.866 0 3.336-2.28 5.92-5.588 5.92zm24.82-9.7h-2.809a.63.63 0 0 0-.582.612v.833c-.64-1.057-2.085-1.835-3.884-1.835-3.503 0-6.783 2.75-6.783 7.145 0 4.37 3.251 7.17 6.755 7.17 1.806 0 3.28-.776 3.92-1.833v.86a.585.585 0 0 0 .582.586h2.808a.575.575 0 0 0 .543-.36.564.564 0 0 0 .041-.225V13.896a.595.595 0 0 0-.591-.612zm-6.533 10.196c-1.86 0-3.256-1.43-3.256-3.412s1.397-3.41 3.256-3.41c1.86 0 3.257 1.426 3.257 3.408s-1.395 3.412-3.257 3.412v.002zm22.294-16.118h-2.808a.588.588 0 0 0-.561.355.598.598 0 0 0-.049.229v6.728c-.648-1.002-2.114-1.78-3.948-1.78-3.476 0-6.7 2.75-6.7 7.145 0 4.37 3.252 7.17 6.755 7.17 1.806 0 3.17-.776 3.92-1.833v.86c0 .323.261.584.583.586h2.808a.571.571 0 0 0 .584-.585V7.95a.569.569 0 0 0-.357-.547.573.573 0 0 0-.227-.041zm-6.532 16.152c-1.852 0-3.237-1.444-3.237-3.448s1.39-3.447 3.237-3.447c1.846 0 3.237 1.444 3.237 3.447s-1.384 3.448-3.237 3.448zm22.29-16.152h-2.803a.597.597 0 0 0-.562.355.581.581 0 0 0-.05.229v6.728c-.64-1.002-2.114-1.78-3.947-1.78-3.477 0-6.7 2.75-6.7 7.145 0 4.37 3.253 7.17 6.755 7.17 1.807 0 3.168-.776 3.92-1.833v.86a.586.586 0 0 0 .584.586h2.803a.571.571 0 0 0 .542-.36.564.564 0 0 0 .04-.225V7.95a.567.567 0 0 0-.582-.588zm-6.532 16.152c-1.853 0-3.237-1.444-3.237-3.448s1.39-3.447 3.237-3.447c1.846 0 3.237 1.444 3.237 3.447s-1.38 3.448-3.232 3.448h-.005zm21.906-9.283-4.19 14.37c-.809 2.556-2.613 4.086-5.421 4.086-1.277 0-2.44-.261-3.35-.782-.531-.303-.971-.58-.971-1.023 0-.275.089-.417.25-.675l.832-1.246c.235-.348.408-.461.66-.461a.96.96 0 0 1 .554.192c.523.339 1.008.63 1.748.63.864 0 1.524-.277 1.88-1.306l.36-1.193h-1.696c-.418 0-.648-.25-.751-.584l-3.75-12.008c-.14-.473-.011-.946.683-.946h2.954c.36 0 .613.123.771.64l2.77 9.67 2.589-9.67c.082-.334.306-.64.75-.64h2.802c.552-.001.719.387.526.946zm-96.806 4.274v7.676a.625.625 0 0 1-.635.634h-2.317a.622.622 0 0 1-.634-.634v-2.015c-1.472 1.858-4.03 3.028-6.924 3.028-5.434 0-9.681-4.088-9.681-9.908 0-6.048 4.585-10.217 10.377-10.217 4.276 0 7.694 1.839 9.212 5.537a.842.842 0 0 1 .07.309c0 .175-.116.307-.486.435l-2.706 1.042a.694.694 0 0 1-.511.009.783.783 0 0 1-.324-.371c-.971-1.847-2.7-3.1-5.36-3.1-3.45 0-5.922 2.694-5.922 6.188 0 3.387 2.104 6.172 6.02 6.172 2.06 0 3.703-.97 4.469-2.037H57.87a.625.625 0 0 1-.634-.635v-2.086a.626.626 0 0 1 .634-.634h7.161a.602.602 0 0 1 .587.367.6.6 0 0 1 .049.24z"></path></svg>
+                </div>
+                <div class="footer-local-settings">
+                    <div class="footer-country">
+                        <h4>Chile-Español</h4>
+                        <i class="bi bi-chevron-up"></i>
+                    </div>
+                    <div class="footer-language">
+                        <h4>CLP$</h4>
+                        <i class="bi bi-chevron-up"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-networks">
+                <i class="bi bi-facebook"></i>
+                <i class="bi bi-instagram"></i>
+                <i class="bi bi-tiktok"></i>
+                <i class="bi bi-twitter-x"></i>
+                <i class="bi bi-youtube"></i>
+            </div>
+        </div>
+        <div class="footer-rights">
+            <h4>&copy; 2026 GoDaddy  -  Creado por Matias Galaz</h4>
+        </div>
+    </footer>
+
+
+
+
+    <script src="index.js"></script>
+</body>
+</html>
