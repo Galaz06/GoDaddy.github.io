@@ -38,6 +38,9 @@ body {
     display: none;
 }
 /* blur */
+.blur {
+    pointer-events: none; 
+}
 /* .blur {
   position: absolute;
   inset: 0;              
