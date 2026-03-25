@@ -23,27 +23,36 @@ btn_close.addEventListener("click", (e)=> {
 
 
 // JS para el footer
-const li_links = document.querySelectorAll(".li-links")
-const links_container = document.querySelectorAll(".links-container")
+function initMobileMenu() {
+  const li_links = document.querySelectorAll(".li-links");
+  const links_container = document.querySelectorAll(".links-container");
 
-li_links.forEach(li => {
-    li.addEventListener("click", e => {
-        const hijo = li.children[1]
-        const estaAbierto = hijo.style.display === "flex" 
-
-        links_container.forEach(item => {
-            item.style.display = "none"
-        })
-
-        if (!estaAbierto) {
-            hijo.style.display = "flex"
-        }
+  if (window.innerWidth >= 980) {
+    links_container.forEach(item => {
+      item.style.display = "";
     })
-})
+    return
+  }
 
-// JS para el main
-// const search_bar = document.querySelector(".search-bar")
-// const search_icon = document.querySelector(".search-bar i")
+  li_links.forEach(li => {
+    if (li.dataset.menuInit) return;
+    li.dataset.menuInit = "true";
 
-// search_bar.addEventListener("click", )
+    li.addEventListener("click", () => {
+      const hijo = li.querySelector(".links-container");
+      const estaAbierto = hijo.style.display === "flex";
+
+      links_container.forEach(item => {
+        item.style.display = "none";
+      });
+
+      if (!estaAbierto) {
+        hijo.style.display = "flex";
+      }
+    })
+  })
+}
+
+initMobileMenu()
+window.addEventListener("resize", initMobileMenu)
 
